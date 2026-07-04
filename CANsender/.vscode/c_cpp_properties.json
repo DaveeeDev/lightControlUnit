@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "ESP-I",
+            "compilerPath": "C:\\Espressif\\tools\\riscv32-esp-elf\\esp-14.2.0_20251107\\riscv32-esp-elf\\bin\\riscv32-esp-elf-gcc.exe",
+            "compileCommands": [
+                "${config:idf.buildPath}/compile_commands.json"
+            ],
+            "includePath": [
+                "${workspaceFolder}/**",
+                "F:/Programme/ESP/.espressif/v5.5.3/esp-idf/components/driver/twai/include"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
