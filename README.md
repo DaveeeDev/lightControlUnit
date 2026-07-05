@@ -2,7 +2,6 @@
 This is my first embedded systems project. The goal here is to build a custom CAN Bus control unit that fits perfectly behind one of the blank switch covers in my Volvo V70.
 It's an open-ended learning playground where I'm figuring out hardware, software, and automotive networking from scratch, since university courses rarely cover embedded systems in depth.
 
----
 
 ## The Backstory & Idea
 
@@ -11,7 +10,9 @@ A boxy Volvo wagon will never be a sports car, so I wanted it to look and functi
 For this, I obviously needed a switch or button inside the cabin to turn the lights on and off.
 
 **The Original Plan:** At first, I wanted to keep it simple: just a basic physical switch and a relay, that send power over a relais to the lights.
+
 **The Problem:** To pull that off, I would have had to run new wires through the car, which meant drilling a hole into the plastic housing of an existing factory control unit. I chose against that to preserve the OEM part.
+
 **The New Plan:** Instead of drilling into the existing control unit, I decided to build a secondary control unit. It will sit inside the existing control unit, tapping directly into its power supply and CAN bus lines. That way I can preserve the clean OEM look of the center stack and achieve a seamless integration.
 
 ---
@@ -44,10 +45,12 @@ The current control unit consist of a ESP32-C3 as the brain, a TJA1042 CAN Trans
 <!-- TODO: Add photos -->
 **Electronic Prototype 2:**
 Switched transceiver board and optimized layout
-<img src="photos/electronic_prototype_2.jpg" width="700" />
+<img src="photos/electronic_prototype_2.jpg" width="700"/>
+
 **Switch Cover Prototype 1:**
 Initial 3D-printed prototype designed to house a simple mechanical switch
 <!-- <img src="photos/cover_prototype_1.jpg" width="700" /> -->
+
 **Switch Cover Prototype 2:**
 Updated version with two additional holes for wire exits (didn't fit perfectly, which ultimately triggered the switch to a fully digital architecture).
 <!-- <img src="photos/cover_prototype_2.jpg" width="700" /> -->
