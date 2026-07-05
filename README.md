@@ -4,7 +4,7 @@ It's an open-ended learning playground where I'm figuring out hardware, software
 
 ---
 
-## 💡 The Backstory & Idea
+## The Backstory & Idea
 
 I am very passionate about the mechanical engineering of cars, more so their engines. That is one of the reasons why I wanted to modify my car, but not in a sporty way.
 A boxy Volvo wagon will never be a sports car, so I wanted it to look and function like a utility vehicle. The first modification is auxiliary work lights (declared as work lights to pass TÜV inspection).
@@ -16,7 +16,7 @@ For this, I obviously needed a switch or button inside the cabin to turn the lig
 
 ---
 
-## 🧠 Learning Goals
+## Learning Goals
 
 Since this is my gateway into the world of embedded engineering, I'm using it to learn a ton of different concepts:
 * **Digital Communication & Protocols:** Deep-diving into how the CAN Bus protocol actually works under the hood.
@@ -27,7 +27,7 @@ Since this is my gateway into the world of embedded engineering, I'm using it to
 
 ---
 
-## 🛠️ Current Status & Hardware
+## Current Status & Hardware
 
 Right now, the project is in the early electronic prototyping stage. For this I soldered up a prototype, in order to sniff the car's CAN Bus.
 Sadly there is not photo of the first prototype, which uzilized a different CAN Transceiver (SN65HVD230) and a slightly different layout. I ended up throwing it out in favor of size and thermal advantages.
@@ -35,24 +35,26 @@ Additionally the first prototype was not receiving any message frames from the c
 
 The main goal for now is to successfully analyze the CAN Bus for existing IDs. This will help prevent choosing an already assigned ID for my new control unit and allow me to log messages from various control units for potential future use.
 
+The current control unit consist of a ESP32-C3 as the brain, a TJA1042 CAN Transciever and a MP1584EN buck driver. A silicone dome button will actuate the circuit, a P6KE7.5A TVS diode protects the buck driver and a 40A automotive relais will deliver power to the lights.
+
 ---
 
-### 📸 Prototypes & Shells
+### Prototypes & Shells
 
 <!-- TODO: Add photos -->
 **Electronic Prototype 2:**
 Switched transceiver board and optimized layout
-<!-- ![Electronic Prototype 2](electronic_prototype_2.jpg) -->
+<img src="photos/electronic_prototype_2.jpg" width="700" />
 **Switch Cover Prototype 1:**
 Initial 3D-printed prototype designed to house a simple mechanical switch
-<!-- ![Switch Cover Prototype 1](cover_prototype_1.jpg) -->
+<!-- <img src="photos/cover_prototype_1.jpg" width="700" /> -->
 **Switch Cover Prototype 2:**
 Updated version with two additional holes for wire exits (didn't fit perfectly, which ultimately triggered the switch to a fully digital architecture).
-<!-- ![Switch Cover Prototype 2](cover_prototype_2.jpg) -->
+<!-- <img src="photos/cover_prototype_2.jpg" width="700" /> -->
 
 ---
 
-## 💻 Codebase
+## Codebase
 
 Since I'm focusing heavily on the hardware right now, the software is super barebones. Currently, it only consists of basic test clients:
 * **Sender Client:** A tiny script/program that pumps out dummy CAN messages for debugging.
@@ -65,7 +67,7 @@ Since I'm focusing heavily on the hardware right now, the software is super bare
 
 ---
 
-## 🚀 Roadmap / What's Next?
+## Roadmap / What's Next?
 
 - [ ] Debug why message frames are not going through. (Double-check CAN Transceiver)
 - [ ] Reverse engineer/find the specific CAN IDs for the Volvo P3 platform's control units
